@@ -13,6 +13,7 @@ local PKT_LEN	= 64
 local NUM_FLOWS	= 1000
 
 function master()
+	print("helloworld")
 	local dev = device.config{port = 0}
 	device.waitForLinks()
 	stats.startStatsTask{dev}
