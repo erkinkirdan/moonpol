@@ -141,7 +141,7 @@ function readconfig()
 	io.close(config)
 end
 
-function master(args,...)
+function master()
 	print("helloworld")
 	readconfig()
 	local dev = device.config{port = 0}
