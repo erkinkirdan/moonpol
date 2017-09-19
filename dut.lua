@@ -142,7 +142,6 @@ function readconfig()
 end
 
 function master()
-	print("helloworld")
 	readconfig()
 	local dev = device.config{port = 0}
 	device.waitForLinks()
