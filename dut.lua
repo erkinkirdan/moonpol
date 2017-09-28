@@ -168,6 +168,7 @@ function master()
 				rxBufs[i]:free()
 			end
 		end
+		txQ:sendN(txBufs, j)
 		roundctr = roundctr + 1
 		if roundctr >= round then
 			tokeninterval = lm.getTime() - tokenlast
@@ -175,7 +176,6 @@ function master()
                		addtoken(tokeninterval)
 			roundctr = 0
 		end
-		txQ:sendN(txBufs, j)
         end
 	lm.waitForTasks()
 end
