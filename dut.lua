@@ -16,7 +16,7 @@ local subnets
 local subnetcounter
 local counter
 local loginterval = 10
-local round = 10000000
+local round = 10000
 
 function getsubnetid(ip)
 	local a = bit.rshift(ip, 24)
