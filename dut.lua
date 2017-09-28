@@ -175,6 +175,7 @@ function master()
                 	tokenlast = lm.getTime()
                		addtoken(tokeninterval)
 			roundctr = 0
+			print("girdi")
 		end
         end
 	lm.waitForTasks()
