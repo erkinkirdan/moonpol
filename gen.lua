@@ -9,7 +9,7 @@ local SRC_IP	= "10.0.0.0"
 local DST_IP	= "20.0.0.0"
 local SRC_PORT_BASE	= 1234
 local DST_POR	= 1234
-local PKT_LEN	= 64 --min:42, max:1514
+local PKT_LEN	= 1514 --min:42, max:1514
 local NUM_FLOWS	= 1000
 
 function master()
