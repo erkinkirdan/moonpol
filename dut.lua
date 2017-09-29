@@ -148,6 +148,7 @@ end
 function master(args)
 	readconfig()
 	round = args.rounds
+	print("round: ", round)
 	local dev = device.config{port = 0}
 	device.waitForLinks()
 	stats.startStatsTask{dev}
