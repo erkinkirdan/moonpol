@@ -157,8 +157,8 @@ function master()
 		local rx = rxQ:recv(rxBufs)
 		local j = 0
 		for i = 1, rx do
-			--local id = getsubnetid(rxBufs[i]:getUdpPacket().ip4:getSrc())
-                	--if removetoken(id) > 0 then
+			local id = getsubnetid(rxBufs[i]:getUdpPacket().ip4:getSrc())
+                	if removetoken(id) > 0 then
 			if 1 > 0 then
 				j = j + 1
 				txBufs[j] = rxBufs[i]
@@ -167,6 +167,7 @@ function master()
                         	pkt.eth:setSrc(SRC_MAC)
 			else
 				rxBufs[i]:free()
+				print("dustu")
 			end
 		end
 		txQ:sendN(txBufs, j)
@@ -176,6 +177,7 @@ function master()
                 	tokenlast = lm.getTime()
                		addtoken(tokeninterval)
 			roundctr = 0
+			print("girdi")
 		end
         end
 	lm.waitForTasks()
