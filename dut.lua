@@ -170,13 +170,13 @@ function master()
 			end
 		end
 		txQ:sendN(txBufs, j)
-		--roundctr = roundctr + 1
-		--if roundctr >= round then
-		--	tokeninterval = lm.getTime() - tokenlast
-                --	tokenlast = lm.getTime()
-               	--	addtoken(tokeninterval)
-		--	roundctr = 0
-		--end
+		roundctr = roundctr + 1
+		if roundctr >= round then
+			tokeninterval = lm.getTime() - tokenlast
+                	tokenlast = lm.getTime()
+               		addtoken(tokeninterval)
+			roundctr = 0
+		end
         end
 	lm.waitForTasks()
 end
