@@ -15,7 +15,7 @@ local tbllong
 local subnets
 local subnetcounter
 local counter
-local round = 1000000
+local round
 
 function getsubnetid(ip)
 	local a = bit.rshift(ip, 24)
