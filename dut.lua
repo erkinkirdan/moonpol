@@ -166,7 +166,6 @@ function master()
                         	pkt.eth:setSrc(SRC_MAC)
 			else
 				rxBufs[i]:free()
-				print("dustu")
 			end
 		end
 		txQ:sendN(txBufs, j)
@@ -176,7 +175,6 @@ function master()
                 	tokenlast = lm.getTime()
                		addtoken(tokeninterval)
 			roundctr = 0
-			print("girdi")
 		end
         end
 	lm.waitForTasks()
