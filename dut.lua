@@ -15,7 +15,6 @@ local tbllong
 local subnets
 local subnetcounter
 local counter
-local loginterval = 10
 local round = 100000
 
 function getsubnetid(ip)
