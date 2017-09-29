@@ -140,8 +140,14 @@ function readconfig()
 	io.close(config)
 end
 
-function master()
+function configure(parser)
+	parser:option("-r --rounds", "Number of rounds."):args(1):convert(tonumber):default(1000000)
+	return parser:parse()
+end
+
+function master(args)
 	readconfig()
+	round = args.rounds
 	local dev = device.config{port = 0}
 	device.waitForLinks()
 	stats.startStatsTask{dev}
