@@ -14,7 +14,6 @@ local tbl24
 local tbllong
 local subnets
 local subnetcounter
-local counter
 local round
 
 function getsubnetid(ip)
@@ -82,7 +81,6 @@ function readconfig()
 	tbllong = ffi.new("uint32_t[?]", tmp1 * 256)
 	config = io.open("./config", "r")
 	subnets = ffi.new("subnet[?]", (subnetcounter + 1))
-	counter = ffi.new("uint32_t[?]", ((subnetcounter + 1) * 2))
 	tmp0 = 0
 	tmp1 = 1
 	local tmp2 = 0
@@ -133,8 +131,6 @@ function readconfig()
 		end
 		subnets[tmp1].bucket_size = BUCKET * l
 		subnets[tmp1].tokens = BUCKET * l
-		counter[tmp1 * 2] = 0
-		counter[tmp1 * 2 + 1] = 0
 		tmp1 = tmp1 + 1
 	end
 	io.close(config)
