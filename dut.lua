@@ -137,7 +137,7 @@ function readconfig()
 end
 
 function configure(parser)
-	parser:option("-r --rounds", "Number of rounds."):args(1):convert(tonumber):default(1000000)
+	parser:option("-r --rounds", "Number of rounds."):args(1):convert(tonumber):default(10000000)
 	return parser:parse()
 end
 
