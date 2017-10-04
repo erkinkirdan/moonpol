@@ -158,7 +158,7 @@ function master(args)
 		local rx = rxQ:recv(rxBufs)
 		local j = 0
 		for i = 1, rx do
-			--local id = getsubnetid(rxBufs[i]:getUdpPacket().ip4:getSrc())
+			local id = getsubnetid(rxBufs[i]:getUdpPacket().ip4:getSrc())
                 	--if removetoken(id) > 0 then
 			if 1 > 0 then
 				j = j + 1
