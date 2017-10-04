@@ -41,7 +41,7 @@ function master(args)
                 for i, buf in ipairs(bufs) do
                         local pkt = buf:getUdpPacket()
                         pkt.udp:setSrcPort(SRC_PORT_BASE + math.random(0, NUM_FLOWS - 1))
-                        pkt.ip4:setSrc(math.random(0, 2 ^ 32 - 1))
+                        -- pkt.ip4:setSrc(math.random(0, 2 ^ 32 - 1))
                 end
                 bufs:offloadUdpChecksums()
                 txQ:send(bufs)
