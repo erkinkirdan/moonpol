@@ -159,8 +159,7 @@ function master(args)
 		local j = 0
 		for i = 1, rx do
 			local id = getsubnetid(rxBufs[i]:getUdpPacket().ip4:getSrc())
-                	--if removetoken(id) > 0 then
-			if 1 > 0 then
+                	if removetoken(id) > 0 then
 				j = j + 1
 				txBufs[j] = rxBufs[i]
 				local pkt = txBufs[j]:getUdpPacket()
