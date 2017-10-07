@@ -13,7 +13,7 @@ local PKT_LEN -- min:42 (default), max:1514
 local NUM_FLOWS	= 1000
 
 function configure(parser)
-	parser:option("-p --packetsize", "Packet size."):args(1):convert(tonumber):default(60)
+	parser:option("-p --packetsize", "Packet size."):args(1):convert(tonumber):default(64)
 	return parser:parse()
 end
 
