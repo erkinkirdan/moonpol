@@ -1,5 +1,5 @@
 # moonpol
-moonpol is a traffic policer prototype on [libmoon](https://github.com/libmoon/libmoon) library. libmoon takes advantage of bringing DPDK and LuaJIT together, thus achieves high packet processing performance. Using this library, moonpol implements a token bucket algoirthm for rate limiting and [DIR-24-8-BASIC](https://ieeexplore.ieee.org/document/662938/) for faster lookup.
+moonpol is a traffic policer prototype on [libmoon](https://github.com/libmoon/libmoon) library. libmoon takes advantage of bringing DPDK and LuaJIT together, thus achieves high packet processing performance. Using this library, moonpol implements a token bucket algorithm for rate limiting and [DIR-24-8-BASIC](https://ieeexplore.ieee.org/document/662938/) for faster lookup.
 
 # Supported HW
 Any [DPDK supported NIC](http://dpdk.org/doc/nics) can utilize moonpol. In order to test usability before starting the policer, ['hello-world' example of libmoon library](https://github.com/libmoon/libmoon/blob/master/README.md#installation) can be tried first.
