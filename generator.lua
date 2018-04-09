@@ -3,8 +3,8 @@ local device	= require "device"
 local stats	= require "stats"
 local memory	= require "memory"
 
-local SRC_MAC	= "a0:36:9f:3b:5b:6c"
-local DST_MAC	= "a0:36:9f:3b:6d:50"
+local SRC_MAC	= "00:00:00:00:00:00"
+local DST_MAC	= "00:00:00:00:00:00"
 local SRC_IP	= "10.0.0.0"
 local DST_IP	= "20.0.0.0"
 local SRC_PORT_BASE	= 1234
