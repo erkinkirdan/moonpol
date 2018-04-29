@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 	if (prefix < 9) {
 		int a = 0;
 		while(cont) {
-			outfile << a << ".0.0.0/" << prefix << "\t" << argv[2] << endl;
+			outfile << a << ".0.0.0/" << prefix << "\t" <<
+				argv[2] << endl;
 			a = a + pow(2, (8 - prefix));
 			if (a == 256)
 				cont = false;
