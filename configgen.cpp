@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
 		int a = 0;
 		int b = 0;
 		while(cont) {
-			outfile << a << "." << b << ".0.0/" << prefix << "\t" << argv[2] << endl;
+			outfile << a << "." << b << ".0.0/" << prefix <<
+				"\t" << argv[2] << endl;
 			b = b + pow(2, (16 - prefix));
 			if (b == 256) {
 				b = 0;
@@ -40,7 +41,8 @@ int main(int argc, char *argv[])
 		int b = 0;
 		int c = 0;
 		while(cont) {
-			outfile << a << "." << b << "." << c << ".0/" << prefix << "\t" << argv[2] << endl;
+			outfile << a << "." << b << "." << c << ".0/" <<
+				prefix << "\t" << argv[2] << endl;
 			c = c + pow(2, (24 - prefix));
 			if (c == 256) {
 				c = 0;
@@ -60,7 +62,8 @@ int main(int argc, char *argv[])
 		int c = 0;
 		int d = 0;
 		while(cont) {
-			outfile << a << "." << b << "." << c << "." << d << "/" << prefix << "\t" << argv[2] << endl;
+			outfile << a << "." << b << "." << c << "." << d <<
+				"/" << prefix << "\t" << argv[2] << endl;
 			d = d + pow(2, (32 - prefix));
 			if (d == 256) {
 				d = 0;
@@ -81,3 +84,4 @@ int main(int argc, char *argv[])
 	outfile.close();
 	return 0;
 }
+
